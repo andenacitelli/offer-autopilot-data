@@ -6,10 +6,11 @@
     "generate:openapi": "tsx bin/generate-openapi.ts",
     "generate:exports": "tsx bin/generate-exports.ts",
     "test": "vitest run",
-    "lint": "pnpm lint:.*",
+    "lint": "pnpm run /^lint:.*/",
+    "lint:depcheck": "depcheck",
     "lint:prettier": "prettier --check .",
+    "lint:typescript": "tsc --noEmit",
     "lint:eslint": "eslint .",
-    "postinstall": "npx husky",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -22,6 +23,7 @@
     "@eslint/js": "~9.16.0",
     "@tsconfig/node20": "~20.1.4",
     "@types/node": "~20.17.0",
+    "depcheck": "~1.4.7",
     "eslint": "~9.16.0",
     "husky": "~9.1.7",
     "lint-staged": "~15.2.11",

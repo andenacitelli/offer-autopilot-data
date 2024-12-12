@@ -1,10 +1,12 @@
+name: Pull Request
+
 on:
   pull_request:
     branches:
       - master
 
 jobs:
-  ci:
+  javascript:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,3 +18,8 @@ jobs:
           node-version-file: .nvmrc
           cache: pnpm
       - run: pnpm i
+      - run: pnpm lint:depcheck
+      - run: pnpm lint:prettier
+      - run: pnpm lint:eslint
+      - run: pnpm lint:typescript
+      - run: pnpm test
