@@ -1,0 +1,19 @@
+{
+  "recommendations": [
+    "formulahendry.auto-rename-tag",
+    "aaron-bond.better-comments",
+    "usernamehw.errorlens",
+    "dbaeumer.vscode-eslint",
+    "github.vscode-github-actions",
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "ecmel.vscode-html-css",
+    "PKief.material-icon-theme",
+    "zhuangtongfa.material-theme",
+    "vunguyentuan.vscode-postcss",
+    "csstools.postcss",
+    "esbenp.prettier-vscode",
+    "mechatroner.rainbow-csv",
+    "jock.svg"
+  ]
+}

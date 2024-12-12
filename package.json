@@ -1,0 +1,37 @@
+{
+  "name": "offer-autopilot-data",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "generate:openapi": "tsx bin/generate-openapi.ts",
+    "generate:exports": "tsx bin/generate-exports.ts",
+    "test": "vitest run",
+    "lint": "pnpm lint:.*",
+    "lint:prettier": "prettier --check .",
+    "lint:eslint": "eslint .",
+    "postinstall": "npx husky",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "**/*.{ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/js": "~9.16.0",
+    "@tsconfig/node20": "~20.1.4",
+    "@types/node": "~20.17.0",
+    "eslint": "~9.16.0",
+    "husky": "~9.1.7",
+    "lint-staged": "~15.2.11",
+    "prettier": "~3.4.2",
+    "typescript-eslint": "~8.18.0",
+    "vitest": "~2.1.8"
+  },
+  "dependencies": {
+    "tsx": "~4.19.2",
+    "typescript": "~5.7.2",
+    "winston": "~3.17.0"
+  }
+}
