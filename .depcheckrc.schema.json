@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "ignoreBinPackage": {
+      "type": "boolean",
+      "description": "Ignore packages with bin entry"
+    },
+    "skipMissing": {
+      "type": "boolean",
+      "description": "Skip calculation of missing dependencies"
+    },
+    "ignorePatterns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Patterns of files to ignore (matches .gitignore spec)"
+    },
+    "ignoreMatches": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Glob patterns of dependencies to ignore"
+    },
+    "ignores": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Package names to ignore (can include glob expressions)"
+    },
+    "parsers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Custom file parsers for specific file patterns"
+    },
+    "detectors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Dependency detection methods"
+    },
+    "specials": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Special dependency recognition scenarios"
+    },
+    "package": {
+      "type": "object",
+      "properties": {
+        "dependencies": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "devDependencies": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "peerDependencies": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "optionalDependencies": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Specify dependencies manually instead of parsing package.json"
+    },
+    "quiet": {
+      "type": "boolean",
+      "description": "Suppress 'No depcheck issue' log"
+    }
+  },
+  "additionalProperties": false
+}

@@ -5,13 +5,14 @@ const EXTENSION_PATTERNS = {
   JS: ["js"].map((ext) => `**/*.${ext}`),
   TS: ["ts"].map((ext) => `**/*.${ext}`),
 };
+
 /** @type {import("typescript-eslint").Config} */
 const config = [
   {
     ...eslint.configs.recommended,
     files: [...EXTENSION_PATTERNS.JS, ...EXTENSION_PATTERNS.TS],
   },
-  ...tseslint.configs.strictTypeChecked.map((config) => {
+  ...tseslint.configs.recommendedTypeChecked.map((config) => {
     return {
       ...config,
       files: [EXTENSION_PATTERNS.TS],

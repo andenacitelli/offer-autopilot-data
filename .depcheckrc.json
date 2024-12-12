@@ -1,0 +1,4 @@
+{
+  "$schema": "./.depcheckrc.schema.json",
+  "ignores": ["depcheck"]
+}
