@@ -6,10 +6,10 @@
     "generate:openapi": "tsx bin/generate-openapi.ts",
     "generate:exports": "tsx bin/generate-exports.ts",
     "test": "vitest run",
-    "lint": "pnpm lint:.*",
+    "lint": "pnpm run /^lint:.*/",
     "lint:prettier": "prettier --check .",
+    "lint:typescript": "tsc --noEmit",
     "lint:eslint": "eslint .",
-    "postinstall": "npx husky",
     "prepare": "husky"
   },
   "lint-staged": {
